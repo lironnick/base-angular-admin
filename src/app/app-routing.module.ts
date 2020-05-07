@@ -1,22 +1,17 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
-import { HomeComponent } from "./view/home/home.component";
-import { ProductComponent } from "./view/product/product.component";
+import { AdminLayoutSidebarComponent } from './shared/components/layouts/admin-layout-sidebar/admin-layout-sidebar.component';
 
 const routes: Routes = [
   {
-    path: "",
-    component: HomeComponent
-  },
-  {
-    path: "products",
-    component: ProductComponent
+    path: '',
+    component: AdminLayoutSidebarComponent,
   }
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes, { useHash: true })],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
