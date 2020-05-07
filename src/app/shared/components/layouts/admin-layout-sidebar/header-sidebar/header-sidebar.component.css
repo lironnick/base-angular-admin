@@ -1,8 +1,12 @@
 .header {
   display: flex;
+  background-color: #FFF;
+  /* height: 40px; */
+  /* border-bottom: 1px solid #ccc; */
+  border-bottom: 1px solid #cdcdcd;
 }
 
-.header a {
+/* .header a {
   display: flex;
   align-items: center;
   text-decoration: none;
@@ -15,4 +19,23 @@
 
 .header .title-group {
   padding-left: 25px;
+} */
+
+.header .navbar {
+  width: 100%;
+}
+
+.header .logotipo-topo {
+  margin: 0 10px;
+  width: 200px;
+  max-width: 100%;
+}
+
+.header .navbar-text {
+  color: #9e0620;
+  font-family: 'uni_sans_regularregular', sans-serif;
+}
+
+.header .navbar-text a {
+  color: #e51937;
 }

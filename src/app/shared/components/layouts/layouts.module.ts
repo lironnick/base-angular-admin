@@ -4,6 +4,7 @@ import { RouterModule } from '@angular/router';
 
 import { AdminLayoutSidebarComponent } from './admin-layout-sidebar/admin-layout-sidebar.component';
 import { HeaderSidebarComponent } from './admin-layout-sidebar/header-sidebar/header-sidebar.component';
+import { SidebarComponent } from './admin-layout-sidebar/sidebar/sidebar.component'
 import { FooterComponent } from '../footer/footer.component';
 
 import { MaterialModule } from '../../../material.module';
@@ -11,6 +12,7 @@ import { MaterialModule } from '../../../material.module';
 const components = [
   AdminLayoutSidebarComponent,
   HeaderSidebarComponent,
+  SidebarComponent,
   FooterComponent
 ];
 
