@@ -11,7 +11,20 @@
   padding-right: 10px;
 }
 
+/* .sidenav .navbar-brand {
+  width: 100%;
+} */
+
 .content {
   padding: 16px;
   background-color: #ffffff;
 }
+
+.example-sidenav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 200px;
+  background: rgba(255, 0, 0, 0.5);
+}
+
