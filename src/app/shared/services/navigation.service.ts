@@ -28,7 +28,7 @@ export class NavigationService {
     },
     {   
         name: 'Produtos',
-        icon: 'i-Bar-Chart',
+        icon: 'i-Bar-Code',
         router: '',
     },
 ];

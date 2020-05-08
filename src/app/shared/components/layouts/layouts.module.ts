@@ -9,6 +9,7 @@ import { AdminLayoutSidebarComponent } from './admin-layout-sidebar/admin-layout
 import { HeaderSidebarComponent } from './admin-layout-sidebar/header-sidebar/header-sidebar.component';
 import { SidebarComponent } from './admin-layout-sidebar/sidebar/sidebar.component'
 import { FooterComponent } from '../footer/footer.component';
+import { BlankLayoutComponent } from './blank-layout/blank-layout.component';
 
 import { AuthLayoutComponent } from './auth-layout/auth-layout.component'
 
@@ -20,7 +21,8 @@ const components = [
   HeaderSidebarComponent,
   SidebarComponent,
   FooterComponent,
-  AuthLayoutComponent
+  AuthLayoutComponent,
+  BlankLayoutComponent
 ];
 
 @NgModule({
