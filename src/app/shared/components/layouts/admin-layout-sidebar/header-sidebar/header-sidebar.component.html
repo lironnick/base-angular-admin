@@ -12,8 +12,7 @@
   <div style="margin: auto"></div>
 
   <div class="header-part-right">
-  
-    <div ngbDropdown placement="bottom-right">
+    <div ngbDropdown placement="bottom-right" *ngIf="showNotification">
       <div class="badge-top-container">
           <span class="badge badge-primary">{{notifications.length}}</span>
           <i ngbDropdownToggle class="i-Bell text-muted header-icon" role="button"></i>
@@ -28,7 +27,7 @@
                       <span>{{item.title}}</span>
                       <span *ngIf="item.badge" class="badge badge-pill badge-{{item.status}} ml-1 mr-1">{{item.badge}}</span>
                       <span class="flex-grow-1"></span>
-                      <span class="text-small text-muted ml-auto">{{item.time }}</span>
+                      <!-- <span class="text-small text-muted ml-auto">{{item.time }}</span> -->
                   </p>
                   <p class="text-small text-muted m-0">{{item.text}}</p>
               </div>

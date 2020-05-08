@@ -1,30 +1,63 @@
-.sidenav {
-  background-color: #FFF;
-  width: 200px;
+.sidebar-left {
+  position: fixed;
+  top: 58px;
+  height: calc(100vh - 58px);
+  background: #fff;
+  box-shadow: 0 4px 20px 1px rgba(0, 0, 0, 0.06), 0 1px 4px rgba(0, 0, 0, 0.08);
+
+  /* left: calc(50px - 50px); */
+  z-index: 90;
+  transition: all .24s ease-in-out; 
 }
 
-.sidenav a {
-  color: #000;
+.sidebar-left .open {
+  left: 0
 }
 
-.sidenav i {
-  padding-right: 10px;
+.sidebar-left .navigation-left {
+  list-style: none;
+  text-align: center;
+  width: 45px;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  
 }
 
-/* .sidenav .navbar-brand {
+.sidebar-left .navigation-left .nav-item {
+  position: relative;
+  display: block;
   width: 100%;
-} */
-
-.content {
-  padding: 16px;
-  background-color: #ffffff;
+  /* color: #663399; */
+  color: #000;
+  /* background-color: #fff; */
+  cursor: pointer;
+  border-bottom: 1px solid #dee2e6;
 }
 
-.example-sidenav {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 200px;
-  background: rgba(255, 0, 0, 0.5);
+.sidebar-left .navigation-left .nav-item:focus {
+  outline: none;
 }
 
+
+.sidebar-left .navigation-left .nav-item .lvl1 {
+  text-align: center;
+}
+
+.sidebar-left .navigation-left .nav-item .nav-item-hold {
+    width: 100%;
+    padding: 18px 0;
+}
+
+.sidebar-left .navigation-left .nav-item .nav-item-hold i {
+  font-size: 19px;
+  /* color: #b1c3c8; */
+  /* color: #de1100; */
+}
+
+.sidebar-left .navigation-left .nav-item .nav-item-hold:hover {
+  background-color: #fbfbfb;
+  color: #de1100;
+}
+
+/*  */

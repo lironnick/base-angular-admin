@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { PerfectScrollbarModule } from 'ngx-perfect-scrollbar';
 
 import { AdminLayoutSidebarComponent } from './admin-layout-sidebar/admin-layout-sidebar.component';
 import { HeaderSidebarComponent } from './admin-layout-sidebar/header-sidebar/header-sidebar.component';
@@ -23,7 +24,8 @@ const components = [
     NgbModule,
     RouterModule,
     CommonModule,
-    MaterialModule
+    MaterialModule,
+    PerfectScrollbarModule
   ],
   declarations: components,
   exports: components

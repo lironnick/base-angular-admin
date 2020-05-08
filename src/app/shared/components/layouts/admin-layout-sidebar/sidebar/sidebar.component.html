@@ -1,19 +1,19 @@
-<mat-sidenav-container >
-  <mat-sidenav class="sidenav" mode="side" opened fixedInViewport="true" fixedTopGap="64"> 
-    <mat-nav-list class="nav-list">
-
-      <a mat-list-item routerLink="/">
-        <i class="material-icons">home</i>
-        Inicio
-      </a>
-
-      <a mat-list-item routerLink="/products">
-        <i class="material-icons">home</i>
-        Products
-      </a>
-
-      <!-- <p><button mat-button (click)="sidenav.toggle()">Toggle</button></p> -->
-
-    </mat-nav-list>
-  </mat-sidenav>
-</mat-sidenav-container>
+<div
+  class="sidebar-left rtl-ps-none"
+  [perfectScrollbar]="{ suppressScrollX: true }"
+>
+  <ul class="navigation-left">
+    <li 
+      [ngClass]="{ active: item.active }"
+      (click)="onClickChangeActiveFlag(item)"
+      class="nav-item lvl1"
+      *ngFor="let item of nav"
+    >
+      
+      <div class="nav-item-hold" placement="right" ngbTooltip="{{ item.name }}">
+        <i [class]="'nav-icon ' + item.icon"></i>
+      </div>
+      
+    </li>
+  </ul>
+</div>
