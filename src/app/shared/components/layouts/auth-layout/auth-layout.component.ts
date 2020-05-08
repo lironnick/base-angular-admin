@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
+import { AuthService } from '../../../services/auth.service';
 
 export interface ILogin {
   login: string;
@@ -22,6 +23,7 @@ export class AuthLayoutComponent implements OnInit {
   constructor(
     private router: Router,
     private fb: FormBuilder,
+    private auth: AuthService,
   ) { }
 
   ngOnInit(): void {
@@ -40,7 +42,12 @@ export class AuthLayoutComponent implements OnInit {
     const login: ILogin = this.loginForm.value;
 
     console.log(login);
-    this.router.navigateByUrl('/dashboard');
+
+    this.auth.signin(login)
+      .subscribe(res => {
+          this.router.navigateByUrl('/dashboard');
+          this.loading = false;
+      });
   }
 
 }

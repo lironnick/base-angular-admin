@@ -1,0 +1,15 @@
+.wrap {}
+
+.wrap .side-content-wrap {}
+
+.wrap .side-content-wrap .sidenav-open {}
+
+.wrap .main-content-wrap {
+  position: fixed;
+  display: flex;
+  width: 100%;
+  padding-top: 78px;
+  padding-left: 70px;
+  padding-right: 10px;
+}
+

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AuthService } from '../../../../services/auth.service';
 
 @Component({
   selector: 'app-header-sidebar',
@@ -10,7 +11,7 @@ export class HeaderSidebarComponent implements OnInit {
   notifications: any[];
   showNotification = false;
 
-  constructor() {
+  constructor(private auth: AuthService) {
 
     this.notifications = [
       {
@@ -36,5 +37,9 @@ export class HeaderSidebarComponent implements OnInit {
    }
 
   ngOnInit(): void { }
+
+  signout() {
+    this.auth.signout();
+  }
 
 }
