@@ -1,0 +1,33 @@
+<div class="login">
+  <section class="form">
+    <img src="./assets/images/logo-abc.png"  alt="LOGOTIPO ABC DA CONSTRUÇÂO">
+
+    <h1>Faça seu login</h1>
+
+    <!-- <form  > -->
+
+    <form [formGroup]="loginForm" (ngSubmit)="logar()">
+
+      <input
+        placeholder="Seu login"
+        type="text"
+        formControlName="login" 
+      />
+      <input
+        placeholder="Seu password"
+        type="password"
+        formControlName="password" 
+      />
+      <button class="button" [disabled]="loading" >
+        <img *ngIf="loading" src="./assets/loading/load-loop.svg"  alt="LOGOTIPO ABC DA CONSTRUÇÂO">
+        <span *ngIf="!loading">Entrar</span>
+      </button>
+
+    
+
+    </form>
+
+  </section>
+
+  <!-- <img src={heroesImg} alt="Heroes" /> -->
+</div>
