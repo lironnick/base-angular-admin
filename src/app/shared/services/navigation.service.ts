@@ -26,6 +26,11 @@ export class NavigationService {
         icon: 'i-Bar-Chart',
         router: '',
     },
+    {   
+        name: 'Produtos',
+        icon: 'i-Bar-Chart',
+        router: '',
+    },
 ];
 
 // sets iconMenu as default;
