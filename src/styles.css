@@ -51,47 +51,71 @@ body {
 /* breadcrumb */
 
 .breadcrumb {
-  position: relative;
-  width: 100%;
-  display: flex;
-  flex-wrap: wrap;
-  padding: 10px 1px;
-  margin-bottom: 5px;
-  list-style: none;
-  background-color: #eee;
+  background-color: transparent;
+  /* border-bottom: 1px solid #dee2e6!important; */
 }
-.breadcrumb h1 {
+
+.title-breadcrumb {
   font-size: 1.5rem;
   line-height: 1;
   padding-right: .5rem;
   margin: 0;
+  color: #333;
+}
+.title-breadcrumb i {
+  color: #464d69;
+  vertical-align: -2px;
+  display: inline-block;
 }
 
-.breadcrumb ul {
+.crumbs {
+  color: #a7a7a7;
+  font-size: 12px;
+  margin-left: 32px;
+  margin-bottom: 12px;
+}
+
+.crumbs ul {
   list-style: none;
   padding: 0;
   margin: 0;
 }
 
-.breadcrumb ul li {
+.crumbs ul li {
   display: inline-block;
   position: relative;
-  padding: 0 .5rem;
   line-height: 1;
   vertical-align: bottom;
-  color: #70657b;
+  padding-right: 10px;
 }
 
-.breadcrumb ul li a{
+
+.crumbs ul li a{
   text-decoration: none;
-  color: #70657b;
+  cursor: pointer;
+  border-right: 1px solid #a7a7a7; 
+  padding-right: 10px;
+  /* color: #70657b; */
 }
 
-.breadcrumb ul li a:hover{
+.crumbs ul li a:hover{
   color: #000;
 }
 
 .separator-breadcrumb {
-  margin-bottom: 2rem;
+  margin: 6px 0px 12px;
   border-top: 1px solid #dee2e6!important;
+}
+
+
+.main-body {
+  margin-top: 10px;
+  background-color: #fff;
+  padding: 1.25rem;
+
+  width: 100%;
+  padding-bottom: 30px;
+  height: 100%;
+  border: none;
+  border-radius: 5px;
 }

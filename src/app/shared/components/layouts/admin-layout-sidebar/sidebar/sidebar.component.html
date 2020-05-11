@@ -3,17 +3,20 @@
   [perfectScrollbar]="{ suppressScrollX: true }"
 >
   <ul class="navigation-left">
+    
     <li 
       [ngClass]="{ active: item.active }"
       (click)="onClickChangeActiveFlag(item)"
       class="nav-item lvl1"
       *ngFor="let item of nav"
     >
-      
-      <div class="nav-item-hold" placement="right" ngbTooltip="{{ item.name }}">
-        <i [class]="'nav-icon ' + item.icon"></i>
-      </div>
-      
+
+      <a routerLink="{{ item.router }}" >
+        <div class="nav-item-hold" placement="right" ngbTooltip="{{ item.name }}">
+          <i [class]="'nav-icon ' + item.icon"></i>
+        </div>
+      </a>
+
     </li>
   </ul>
 </div>

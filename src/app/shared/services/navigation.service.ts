@@ -24,13 +24,18 @@ export class NavigationService {
     {   
         name: 'Dashboard',
         icon: 'i-Bar-Chart',
-        router: '',
+        router: '/dashboard/v1',
     },
     {   
         name: 'Produtos',
         icon: 'i-Bar-Code',
         router: '',
     },
+    {   
+      name: 'Usuários',
+      icon: 'i-Administrator',
+      router: '/usuarios',
+  },
 ];
 
 // sets iconMenu as default;
