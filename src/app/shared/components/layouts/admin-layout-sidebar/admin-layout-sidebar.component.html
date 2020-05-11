@@ -7,26 +7,18 @@
       <app-sidebar></app-sidebar>
   </div>
   
+
+
   <div class="container-fluid main-content">
+
     <!-- breadcrumb -->
+    <app-breadcrumb
+      [title]="title"
+      [items]="crumb"
+    ></app-breadcrumb>
+    
     <div class="row">
-        <div class="col-md-12 ">
-          <div class="title-breadcrumb"><i class="i-Arrow-Left"></i> Dashboard</div>
-        </div>
-        <div class="col-md-12">
-          
-          <div class="crumbs">
-            <ul>
-              <li><a>Home</a></li>
-              <li>Dashboard</li>
-            </ul>
-          </div>   
-
-        </div>
-    </div>
-
-    <div class="row">
-      <div class="col-md-12 ">
+      <div class="col-md-12">
         <div class="main-body">
           <router-outlet></router-outlet>
         </div>

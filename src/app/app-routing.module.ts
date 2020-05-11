@@ -15,7 +15,10 @@ const adminRoutes: Routes = [
   },
   {
     path: 'usuarios',
-    loadChildren: () => import('./views/user/user.module').then(m => m.UserModule)
+    loadChildren: () => import('./views/user/user.module').then(m => m.UserModule),
+    data: {
+      breadcrumb: 'usuarios'
+    }
   },
 
 ];

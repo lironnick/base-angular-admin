@@ -1,0 +1,33 @@
+<div class="row">
+
+  <div class="col-md-12 ">
+    <div class="title-breadcrumb">
+      <i class="i-Arrow-Left"></i>
+      {{ title }}
+    </div>
+  </div>
+
+  <div class="col-md-12">
+    
+    <div class="crumbs">
+      <ul>
+
+        <li>
+          <a routerLink="">
+            Home
+          </a>
+        </li>
+
+        <li *ngFor="let item of items">
+          <span *ngIf="isTheLastItem(item)">
+            {{ item.text}}
+          </span>
+          <a *ngIf="!isTheLastItem(item)" [routerLink]="item.link">
+            {{ item.text}}
+          </a>
+        </li>
+      </ul>
+    </div>   
+
+  </div>
+</div>

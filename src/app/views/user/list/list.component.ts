@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { BreadcrumbService } from '../../../shared/services/breadcrumb.service';
 
 @Component({
   selector: 'app-list',
@@ -7,7 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ListComponent implements OnInit {
 
-  constructor() { }
+  constructor(private breadcrumbService: BreadcrumbService) { 
+    breadcrumbService.breadcrumbData = {
+      title: 'Usuarios',
+      breadcrumb: [ 
+        {text: 'Usuarios'} , 
+      ]
+    }
+   }
 
   ngOnInit(): void {
   }
