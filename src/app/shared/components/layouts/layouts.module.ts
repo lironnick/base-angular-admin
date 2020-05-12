@@ -13,6 +13,7 @@ import { BlankLayoutComponent } from './blank-layout/blank-layout.component';
 import { BreadcrumbComponent } from '../breadcrumb/breadcrumb.component'
 
 import { AuthLayoutComponent } from './auth-layout/auth-layout.component'
+import { LoadingComponent } from '../loading/loading.component';
 
 import { MaterialModule } from '../../../material.module';
 
@@ -24,7 +25,8 @@ const components = [
   FooterComponent,
   AuthLayoutComponent,
   BlankLayoutComponent,
-  BreadcrumbComponent
+  BreadcrumbComponent,
+  LoadingComponent
 ];
 
 @NgModule({

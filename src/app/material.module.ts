@@ -19,7 +19,6 @@ import { MatSortModule } from '@angular/material/sort';
 import { ScrollingModule } from '@angular/cdk/scrolling';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 
-
 @NgModule({
   imports: [
     MatToolbarModule,

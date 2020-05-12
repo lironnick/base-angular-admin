@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 import { BreadcrumbService } from '../../../services/breadcrumb.service';
+import { LoadingService } from '../../../services/loading.service';
 
 @Component({
   selector: 'app-admin-layout-sidebar',
@@ -9,7 +10,10 @@ import { BreadcrumbService } from '../../../services/breadcrumb.service';
 })
 export class AdminLayoutSidebarComponent implements OnInit {
 
-  constructor(private breadcrumbService: BreadcrumbService) { }
+  constructor(
+    private breadcrumbService: BreadcrumbService,
+    private loadingService: LoadingService,
+    ) { }
 
   ngOnInit(): void {
   }
@@ -20,6 +24,10 @@ export class AdminLayoutSidebarComponent implements OnInit {
 
   get crumb(): any {
     return this.breadcrumbService.breadcrumbData.breadcrumb;
+  }
+
+  get loading(): any {
+    return this.loadingService.loadingData.status;
   }
 
 }

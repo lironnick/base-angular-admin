@@ -1,0 +1,53 @@
+<div class="row">
+  <div class="col-md-6">
+
+    <!-- <pre>{{ purchase?.produtos | json }} </pre> -->
+    <form [formGroup]="userForm" (ngSubmit)="add()">
+    
+      <p>
+        <mat-form-field class="input-full">
+          <mat-label>Nome</mat-label>
+          <input matInput 
+                placeholder="Ex. joão marciano"
+                type="text"
+                formControlName="name" >
+          <mat-hint align="start"><strong>Obrigatorio</strong> </mat-hint>
+        </mat-form-field>
+      </p>
+      
+      <p>
+        <mat-form-field class="input-full">
+          <mat-label>Login</mat-label>
+          <input matInput 
+                placeholder="Ex. joao.marciano"
+                type="text"
+                formControlName="login" >
+          <mat-hint align="start"><strong>Obrigatorio</strong> </mat-hint>
+        </mat-form-field>
+      </p>
+
+      <p>
+        <mat-form-field class="input-full">
+          <mat-label>Password</mat-label>
+          <input matInput 
+                placeholder="!fkk933nF!"
+                type="password"
+                formControlName="password" >
+          <mat-hint align="start"><strong>Obrigatorio</strong> </mat-hint>
+        </mat-form-field>
+      </p>
+
+      <button 
+        [disabled]="userForm.invalid" 
+        type="submit" 
+        class="btn btn-success">
+        Cadastrar
+      </button>
+
+    </form>
+
+  </div>
+
+  <div class="col-md-6">teste</div>
+
+</div>
