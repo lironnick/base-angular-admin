@@ -5,15 +5,14 @@
 .wrap .side-content-wrap .sidenav-open {}
 
 .wrap .main-content {
-  padding-top: 48px;
+  padding-top: 77px;
   padding-left: 56px;
-  padding-right: 11px;
+  padding-bottom: 55px;
 }
 
 
 .wrap .main-body {
-  margin-top: 10px;
-  background-color: #fff;
+  /* background-color: #111; */
   padding: 1.25rem;
 
   width: 100%;

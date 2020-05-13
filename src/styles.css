@@ -1,32 +1,6 @@
 @import '~bootstrap/dist/css/bootstrap.css';
-@import './assets//iconsmind/iconsmind.css';
-
-@import url('https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=swap');
-
-
-@font-face {
-  font-family: 'uni_sans_regularregular';
-  src: url('./assets/fonts/uni-sans-regular-webfont.eot');
-  src: url('./assets/fonts/uni-sans-regular-webfont.eot?#iefix') format('embedded-opentype'),
-  url('./assets/fonts/uni-sans-regular-webfont.woff2') format('woff2'),
-  url('./assets/fonts/uni-sans-regular-webfont.woff') format('woff'),
-  url('./assets/fonts/uni-sans-regular-webfont.ttf') format('truetype'),
-  url('./assets/fonts/uni-sans-regular-webfont.svg#uni_sans_regularregular') format('svg');
-  font-weight: normal;
-  font-style: normal;
-
-}
-@font-face {
-  font-family: 'uni_sans_boldregular';
-  src: url('./assets/fonts/uni-sans-bold-webfont.eot');
-  src: url('./assets/fonts/uni-sans-bold-webfont.eot?#iefix') format('embedded-opentype'),
-  url('./assets/fonts/uni-sans-bold-webfont.woff2') format('woff2'),
-  url('./assets/fonts/uni-sans-bold-webfont.woff') format('woff'),
-  url('./assets/fonts/uni-sans-bold-webfont.ttf') format('truetype'),
-  url('./assets/fonts/uni-sans-bold-webfont.svg#uni_sans_boldregular') format('svg');
-  font-weight: bold;
-  font-style: normal;
-}
+@import './assets/iconsmind/iconsmind.css';
+@import './custom.css';
 
 * {
   margin: 0;
@@ -41,6 +15,9 @@ body {
   -webkit-font-smoothing: antialiased;
   font-family: 'uni_sans_regularregular', sans-serif;
 }
+
+
+
 
 .badge {
   font-weight: 600;
@@ -82,7 +59,76 @@ table {
   }
 }
 
+/* INPUT */
 
 .input-full {
   width: 100%;
+  margin-bottom: 5px;
 }
+
+.mat-form-field {
+  font-size: 14px;
+  width: 60%;
+  color: #fff;
+}
+
+.footer-btn {
+  position: fixed;
+  bottom: 0;
+  display: flex;
+  justify-content: flex-end;
+  background-color: #f8f9fa;
+  font-size: 12px;
+  height: 47px;
+  width: 100%;
+  left: 44px;
+  background-color: #111;
+  border-top: 1px solid #323130;
+  padding: 10px;
+}
+
+
+
+
+/* TABELA  */
+
+.table {
+  color: #fff;
+  background-color: #111;
+  /* border-bottom: 1px solid #323130; */
+}
+.mat-table{
+  background: #111;
+}
+.table th {
+  color: #fff;
+  font-weight: bold;
+  font-size: 14px;
+  border-bottom: 1px solid #323130 !important;
+  vertical-align: inherit;
+  border-top: none;
+  padding: 10px !important;
+}
+
+.table td {
+  color: #fff;
+  border-bottom: 1px solid #323130 !important;
+  vertical-align: inherit;
+  border-top: 1px solid #323130 !important;
+}
+
+
+.table tr.mat-header-row {
+  height: 36px;
+}
+
+.table tr.mat-row, tr.mat-footer-row {
+  height: 34px;
+}
+
+.mat-paginator {
+  background-color: transparent;
+  color: #fff !important;
+}
+
+

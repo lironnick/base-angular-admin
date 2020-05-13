@@ -1,10 +1,11 @@
-<div class="row">
-  <div class="col-md-6">
+<form [formGroup]="userForm" (ngSubmit)="add()">
 
-    <!-- <pre>{{ purchase?.produtos | json }} </pre> -->
-    <form [formGroup]="userForm" (ngSubmit)="add()">
-    
-      <p>
+
+  <div class="row">
+    <div class="col-md-6">
+
+      <!-- <pre>{{ purchase?.produtos | json }} </pre> -->
+      
         <mat-form-field class="input-full">
           <mat-label>Nome</mat-label>
           <input matInput 
@@ -13,9 +14,8 @@
                 formControlName="name" >
           <mat-hint align="start"><strong>Obrigatorio</strong> </mat-hint>
         </mat-form-field>
-      </p>
       
-      <p>
+        
         <mat-form-field class="input-full">
           <mat-label>Login</mat-label>
           <input matInput 
@@ -24,9 +24,7 @@
                 formControlName="login" >
           <mat-hint align="start"><strong>Obrigatorio</strong> </mat-hint>
         </mat-form-field>
-      </p>
 
-      <p>
         <mat-form-field class="input-full">
           <mat-label>Password</mat-label>
           <input matInput 
@@ -35,19 +33,30 @@
                 formControlName="password" >
           <mat-hint align="start"><strong>Obrigatorio</strong> </mat-hint>
         </mat-form-field>
-      </p>
 
-      <button 
-        [disabled]="userForm.invalid" 
-        type="submit" 
-        class="btn btn-success">
-        Cadastrar
-      </button>
+    </div>
 
-    </form>
+    <div class="col-md-6"></div>
 
   </div>
 
-  <div class="col-md-6">teste</div>
 
-</div>
+  <div class="footer-btn">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-12">
+          <button 
+            [disabled]="userForm.invalid" 
+            type="submit" 
+            class="btn btn-primary btn-sm">
+            Cadastrar
+          </button>
+        </div>
+      </div>
+    </div>
+    
+  </div>
+
+</form>
+
+<!-- <div class="conteiner-success"></div> -->

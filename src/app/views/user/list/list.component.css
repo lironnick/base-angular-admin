@@ -3,11 +3,6 @@
   overflow: auto;
 }
 
-.mat-form-field {
-  font-size: 14px;
-  width: 60%;
-}
-
 .loading-shade {
   position: absolute;
   top: 0;
