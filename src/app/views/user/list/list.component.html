@@ -6,8 +6,17 @@
     </mat-form-field>
   </div>
   <div class="col-md-6">
+
+    <button (click)="realod()" class="btn btn-light float-right btn-sm ml-1" >
+      <fa-icon [icon]="faSyncAlt"></fa-icon> Atualizar
+    </button>
+
     <a routerLink="/usuarios/add" 
-       class="btn btn-light float-right btn-sm">Adicionar</a>
+      class="btn btn-light float-right btn-sm">
+      <fa-icon [icon]="faPlus"></fa-icon> Adicionar
+    </a>
+
+    
 
   </div>
 </div>

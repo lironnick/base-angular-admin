@@ -3,8 +3,15 @@ import { MatPaginator } from '@angular/material/paginator';
 import { MatTableDataSource } from '@angular/material/table';
 
 import { BreadcrumbService } from '../../../shared/services/breadcrumb.service';
+import { LoadingService } from '../../../shared/services/loading.service';
 import { UserService } from '../../../shared/services/user.service';
+import { SnackbarService } from '../../../shared/services/snackbar.service';
 
+import { faPlus, faSyncAlt } from '@fortawesome/free-solid-svg-icons';
+
+
+
+// <i class="fas fa-plus"></i>
 export interface PeriodicElement {
   id: number;
   name: string;
@@ -42,16 +49,23 @@ const ELEMENT_DATA: PeriodicElement[] = [
 })
 export class ListComponent implements OnInit {
 
+  faPlus = faPlus;
+  faSyncAlt = faSyncAlt;
+
   displayedColumns: string[] = ['id', 'name', 'login', 'active'];
   dataSource: any = [];
   pageSize = 20;
   isLoadingResults = true;
+
+  
   
 
   @ViewChild(MatPaginator, {static: true}) paginator: MatPaginator;
 
   constructor(
     private breadcrumbService: BreadcrumbService,
+    private loadingService: LoadingService,
+    private snackbarService: SnackbarService,
     private userService: UserService
   ) { 
     breadcrumbService.breadcrumbData = {
@@ -68,20 +82,32 @@ export class ListComponent implements OnInit {
 
   get() {
     this.userService.get()
-    .subscribe(res => {
-      console.log(res);
-      const response: any = res;
-      this.dataSource = new MatTableDataSource<PeriodicElement>(response);
-      this.dataSource.paginator = this.paginator;
-      this.isLoadingResults = false;
-    }, error => {
-      console.log(error);
-    });
+      .subscribe(res => {
+        const response: any = res;
+        this.dataSource = new MatTableDataSource<PeriodicElement>(response);
+        this.dataSource.paginator = this.paginator;
+        this.isLoadingResults = false;
+        this.loading(false);
+      }, error => {
+        this.snackbarService.success = { type: 'danger', text: error.error.error };
+        this.loading(false);
+      });
+  }
+
+  realod() {
+    this.loading(true);
+    this.get();
   }
 
   applyFilter(event: Event) {
     const filterValue = (event.target as HTMLInputElement).value;
     this.dataSource.filter = filterValue.trim().toLowerCase();
   }
+
+  loading(status) {
+    this.loadingService.loadingData.status = status;
+  }
+
+
 
 }

@@ -5,8 +5,8 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { BreadcrumbService } from '../../../shared/services/breadcrumb.service';
 import { LoadingService } from '../../../shared/services/loading.service';
 import { UserService } from '../../../shared/services/user.service';
+import { SnackbarService } from '../../../shared/services/snackbar.service';
 import { IUser } from './user.model'
-
 
 
 @Component({
@@ -23,7 +23,8 @@ export class CreateComponent implements OnInit {
     private fb: FormBuilder,
     private breadcrumbService: BreadcrumbService,
     private loadingService: LoadingService,
-    private userService: UserService
+    private userService: UserService,
+    private snackbarService: SnackbarService
     ) { 
     breadcrumbService.breadcrumbData = {
       title: 'Usuarios',
@@ -55,11 +56,13 @@ export class CreateComponent implements OnInit {
 
     this.userService.add(user)
       .subscribe(res => {
-        console.log('add: ',res);
-          // this.router.navigateByUrl('/usuarios');
-          // this.loading = false;
+        this.snackbarService.success = {
+            type: 'success',
+            text: `Usuário ${user.name} cadastrado com sucesso!`
+        };
+        this.router.navigateByUrl('/usuarios');
       }, error => {
-        console.log(error.error);
+        this.snackbarService.success = { type: 'danger', text: error.error.error };
         this.loading(false);
       });
   }

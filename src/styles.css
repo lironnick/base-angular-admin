@@ -131,4 +131,25 @@ table {
   color: #fff !important;
 }
 
+/* SNACKBAR */
 
+.success {
+  background:#28a745;
+  color: #fff;
+}
+
+.danger {
+  background:#dc3545;
+  color: #fff;
+}
+
+.warning {
+  background:#ffc107;
+  color: #fff;
+}
+
+.secondary {
+  background:#6c757d;
+  color: #fff;
+  font-weight: bold;
+}
